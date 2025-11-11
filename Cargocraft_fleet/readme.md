@@ -50,6 +50,33 @@ If impossible, print:
 - Minimum possible n = 1, 2, 3
 - Odd numbers → automatically output -1
 
+
+## How to Run
+
+The CargoCraft Fleet program can be run **directly in the terminal** or using **input redirection from a file**.
+
+---
+
+### Option 1: Manual Input (Directly in Terminal)
+
+1. Open terminal and navigate to the folder containing `task_b.py`.
+2. Run the program:
+
+```bash
+python task_b.py 
+```
+
+3. Enter input line by line.
+4. Press Enter then ctrl+z and Enter after the last input.
+
+### Option 2: Input From a File
+
+1. Prepare your input file named test.txt in the same directory as task_b.py or edit any of the existing test cases files.
+2. Run the program in terminal: 
+```bash
+python task_b.py < test.txt
+```
+
 ## Time and Memory Limit Safety
 
 - Time Limit: 1 second per test
