@@ -1,0 +1,187 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0; /* plain background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-form {
+  background: white;
+  width: 500px; /* slightly wider for desktop */
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.login-form h2 {
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+}
+
+.login-form label {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.login-form input {
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  width: 100%;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+
+.login-form button {
+  margin-top: 20px;
+  padding: 14px;
+  background: #333;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-form button:hover {
+  background: #555;
+}
+
+.forgot-password {
+  margin-top: 12px;
+  text-align: center;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Error message below button */
+.error {
+  height: 22px;
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Password criteria list */
+.criteria-list {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.criteria-list li {
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.criteria-list .met {
+  color: green;
+}
+
+.criteria-list .unmet {
+  color: red;
+}
+
+/* Welcome screen */
+.welcome-container {
+  background: white;
+  width: 500px;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.welcome-container h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.welcome-container button {
+  padding: 14px 25px;
+  background: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.welcome-container button:hover {
+  background: #ff4c4c;
+}
+
+/* Toast styles */
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0.9;
+  z-index: 1000;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from { top: 0; opacity: 0; }
+  to { top: 20px; opacity: 0.9; }
+}
+
+@keyframes fadeout {
+  from { top: 20px; opacity: 0.9; }
+  to { top: 0; opacity: 0; }
+}
+
+
+/* Responsive */
+@media (max-width: 520px) {
+  .login-form,
+  .welcome-container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
