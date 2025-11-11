@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+### Frontend Login Page — React Demo
+## Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a responsive, frontend-only login page built using React, HTML, CSS, and JavaScript. It demonstrates a clean, professional login interface with form validation, password criteria checks, toast notifications, and interactive UI elements.
 
-## Available Scripts
+⚠️ Note: All functionality is frontend-only; no backend is used. Sample credentials are hardcoded for demonstration purposes.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+1. Login Form
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Centered form on a plain, modern background.
+- Inputs for email and password.
+- Login button.
+- “Forgot password?” link triggers a toast notification.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Password Validation
 
-### `npm test`
+- Password must be 8–16 characters.
+- Must include:
+  - One uppercase letter
+  - One lowercase letter
+  - One number
+  - One symbol
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Criteria are shown only after login attempt.
 
-### `npm run build`
+3. Email Validation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Email field cannot be empty.
+- Shows error if email does not exist in the demo list.
+- Shows error if password is incorrect.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Interactive UI
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Eye icon to toggle password visibility.
+- Error messages displayed below the login button.
+- Responsive layout for desktop and mobile.
+- Toast notifications for:
+  - Successful login
+  - Forgot password click
 
-### `npm run eject`
+5. Successful Login
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Hides the login form.
+- Shows a welcome message with the logged-in email.
+- Includes a logout button to return to the login form.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Demo Credentials
+| Email             | Password     |
+|------------------|-------------|
+| test@example.com  | Password1!  |
+| admin@example.com | Admin123#   |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## How to Run
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository (or copy the project folder).
 
-## Learn More
+```bash
+git clone https://github.com/pandeybishwas5/SolumClinic
+cd FrontendTest/login-app
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Install dependencies (React and icons):
 
-### Code Splitting
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+3. Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Open your browser at http://localhost:3000 to see the login page.
 
-### Advanced Configuration
+## Technical Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- All validation is handled on the frontend.
+- Form is responsive and does not resize when errors occur.
+- Password criteria only appear after the user clicks login.
+- Toast notifications are displayed at the top of the screen for better visibility.
+- No backend or API calls are used; all data is simulated.
 
-### Deployment
+## Notes for Reviewers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The login page is fully interactive and meets all requirements of a typical frontend technical assessment.
+- All errors, notifications, and UI behavior are professional and user-friendly.
+- Works across desktop and mobile devices.
