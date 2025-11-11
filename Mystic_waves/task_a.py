@@ -26,7 +26,13 @@ def main():
     if len(data) < 1 + 2 * t:
         print("Incomplete test case data.")
         return
+    
+    # Warn if there are extra lines beyond the expected number of test cases
+    if len(data) > 1 + 2 * t:
+        extra_cases = (len(data) - 1 - 2 * t) // 2
+        print(f"Warning: {extra_cases} extra test case(s) ignored.")
 
+        
     results = []
     idx = 1
 
